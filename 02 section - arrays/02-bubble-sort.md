@@ -26,3 +26,11 @@ To implement the Bubble Sort algorithm in a programming language, we need:
 The Bubble Sort algorithm loops through every value in the array, comparing it to the value next to it. So for an array of values, there must be such comparisons in one loop.
 
 And after one loop, the array is looped through again and again times.
+
+## Selection Sort Time Complexity
+
+Selection Sort sorts an array of n values.
+
+On average, about n/2 elements are compared to find the lowest value in each loop.
+
+And Selection Sort must run the loop to find the lowest value approximately n times.
