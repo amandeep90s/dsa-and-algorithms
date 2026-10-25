@@ -24,3 +24,14 @@ Reasons to implement stacks using arrays:
 A reason for not using arrays to implement stacks:
 
 - Fixed size: An array occupies a fixed part of the memory. This means that it could take up more memory than needed, or if the array fills up, it cannot hold more elements.
+
+## Stack Implementation using Linked Lists
+
+A reason for using linked lists to implement stacks:
+
+- Dynamic size: The stack can grow and shrink dynamically, unlike with arrays.
+
+Reasons for not using linked lists to implement stacks:
+
+- Extra memory: Each stack element must contain the address to the next element (the next linked list node).
+- Readability: The code might be harder to read and write for some because it is longer and more complex.
