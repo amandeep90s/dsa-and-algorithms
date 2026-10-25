@@ -14,3 +14,9 @@ Traversing a linked list means to go through the linked list by following the li
 Traversal of linked lists is typically done to search for a specific node, and read or modify the node's content, remove the node, or insert a node right before or after that node.
 
 To traverse a singly linked list, we start with the first node in the list, the head node, and follow that node's next link, and the next node's next link and so on, until the next address is null.
+
+## Find The Lowest Value in a Linked List
+
+Let's find the lowest value in a singly linked list by traversing it and checking each value.
+
+Finding the lowest value in a linked list is very similar to how we found the lowest value in an array, except that we need to follow the next link to get to the next node.
