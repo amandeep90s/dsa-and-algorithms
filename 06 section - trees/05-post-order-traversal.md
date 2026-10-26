@@ -6,6 +6,8 @@ Post-order Traversal works by recursively doing a Post-order Traversal of the le
 
 What makes this traversal "post" is that visiting a node is done "after" the left and right child nodes are called recursively.
 
+> Everyday example: Imagine cleaning a house by tidying the rooms to the living room's left and right first, then cleaning the living room last. This is post-order because you handle the main room after the other rooms.
+
 The postOrderTraversal() function keeps traversing the left subtree recursively (line 4), until None is returned when C's left child node is called as the node argument.
 
 After C's left child node returns None, line 5 runs and C's right child node returns None, and then the letter 'C' is printed (line 6).

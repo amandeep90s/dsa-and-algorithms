@@ -6,6 +6,8 @@ In-order Traversal does a recursive In-order Traversal of the left subtree, visi
 
 What makes this traversal "in" order, is that the node is visited in between the recursive function calls. The node is visited after the In-order Traversal of the left subtree, and before the In-order Traversal of the right subtree.
 
+> Everyday example: Imagine cleaning a house by tidying the room on the living room's left, then the living room, and finally the room on its right. This is in-order because you handle the main room between the other rooms.
+
 The inOrderTraversal() function keeps calling itself with the current left child node as an argument (line 4) until that argument is None and the function returns (line 2-3).
 
 The first time the argument node is None is when the left child of node C is given as an argument (C has no left child).

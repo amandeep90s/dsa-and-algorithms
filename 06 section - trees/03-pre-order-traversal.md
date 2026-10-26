@@ -6,6 +6,8 @@ Pre-order Traversal is done by visiting the root node first, then recursively do
 
 This traversal is "pre" order because the node is visited "before" the recursive pre-order traversal of the left and right subtrees.
 
+> Everyday example: Imagine cleaning a house by tidying the living room first, then the room on its left, and finally the room on its right. This is pre-order because you handle the main room before the other rooms.
+
 The first node to be printed is node R, as the Pre-order Traversal works by first visiting, or printing, the current node (line 4), before calling the left and right child nodes recursively (line 5 and 6).
 
 The preOrderTraversal() function keeps traversing the left subtree recursively (line 5), before going on to traversing the right subtree (line 6). So the next nodes that are printed are 'A' and then 'C'.
