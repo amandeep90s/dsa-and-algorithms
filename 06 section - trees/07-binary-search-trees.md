@@ -75,3 +75,37 @@ The next section will explain how we can delete a node in a BST, but to do that 
 > 1. Start at the root node of the subtree.
 > 2. Go left as far as possible.
 > 3. The node you end up in is the node with the lowest value in that BST subtree.
+
+## Delete a Node in a BST
+
+To delete a node, our function must first search the BST to find it.
+
+After the node is found there are three different cases where deleting a node must be done differently.
+
+How it works:
+
+1. If the node is a leaf node, remove it by removing the link to it.
+2. If the node only has one child node, connect the parent node of the node you want to remove to that child node.
+3. If the node has both right and left child nodes: Find the node's in-order successor, change values with that node, then delete it.
+
+In step 3 above, the successor we find will always be a leaf node, and because it is the node that comes right after the node we want to delete, we can swap values with it and delete it.
+
+Node 8 is a leaf node (case 1), so after we find it, we can just delete it.
+
+Node 19 has only one child node (case 2). To delete node 19, the parent node 15 is connected directly to node 18, and then node 19 can be removed.
+
+Node 13 has two child nodes (case 3). We find the successor, the node that comes right after during in-order traversal, by finding the lowest node in node 13's right subtree, which is node 14. Value 14 is put into node 13, and then we can delete node 14.
+
+## BST Balance and Time Complexity
+
+On a Binary Search Tree, operations like inserting a new node, deleting a node, or searching for a node are actually O(h). That means that the higher the tree is (h), the longer the operation will take.
+
+The reason why we wrote that searching for a value is O(logn) in the table above is because that is true if the tree is "balanced".
+
+We call this tree balanced because there are approximately the same number of nodes on the left and right side of the tree.
+
+The exact way to tell that a Binary Tree is balanced is that the height of the left and right subtrees of any node only differs by one. In the image above, the left subtree of the root node has height h=2, and the right subtree has height h=3.
+
+For a balanced BST, with a large number of nodes (big n), we get height h≈log2n, and therefore the time complexity for searching, deleting, or inserting a node can be written as O(h)=O(logn).
+
+But, in case the BST is completely unbalanced, like in the image below, the height of the tree is approximately the same as the number of nodes, h≈n, and we get time complexity O(h)=O(n) for searching, deleting, or inserting a node.
