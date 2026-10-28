@@ -51,3 +51,27 @@ Similarly, searching for a value in a BST can also be done really fast because o
 The time complexity for searching a BST for a value is O(h), where h is the height of the tree.
 
 For a BST with most nodes on the right side for example, the height of the tree becomes larger than it needs to be, and the worst case search will take longer. Such trees are called unbalanced.
+
+## Insert a Node in a BST
+
+Inserting a node in a BST is similar to searching for a value. All nodes in the BST are unique, so in case we find the same value as the one we want to insert, we do nothing.
+
+> How it works:
+>
+> 1. Start at the root node.
+> 2. Compare each node:
+>
+> - Is the value lower? Go left.
+> - Is the value higher? Go right.
+>
+> 3. Continue to compare nodes with the new value until there is no right or left to compare with. That is where the new node is inserted.
+
+## Find The Lowest Value in a BST Subtree
+
+The next section will explain how we can delete a node in a BST, but to do that we need a function that finds the lowest value in a node's subtree.
+
+> How it works:
+>
+> 1. Start at the root node of the subtree.
+> 2. Go left as far as possible.
+> 3. The node you end up in is the node with the lowest value in that BST subtree.
