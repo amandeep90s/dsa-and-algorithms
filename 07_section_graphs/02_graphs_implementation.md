@@ -25,3 +25,12 @@ To implement a Graph that is directed and weighted, we just need to do a few cha
 To create directed Graphs, we just need to remove line 10 in the previous example code, so that the matrix is not automatically symmetric anymore.
 
 The second change we need to do is to add a weight argument to the add_edge() method, so that instead of just having value 1 to indicate that there is an edge between two vertices, we use the actual weight value to define the edge.
+
+## Depth First Search Traversal
+
+Depth First Search is said to go "deep" because it visits a vertex, then an adjacent vertex, and then that vertex' adjacent vertex, and so on, and in this way the distance from the starting vertex increases for each recursive iteration.
+
+How it works:
+
+- Start DFS traversal on a vertex.
+- Do a recursive DFS traversal on each of the adjacent vertices as long as they are not already visited.
