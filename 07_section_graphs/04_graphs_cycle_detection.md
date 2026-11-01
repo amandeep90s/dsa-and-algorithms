@@ -27,3 +27,19 @@ How it works:
 ## DFS Cycle Detection for Directed Graphs
 
 To detect cycles in Graphs that are directed, the algorithm is still very similar as for undirected Graphs, but the code must be modified a little bit because for a directed Graph, if we come to an adjacent node that has already been visited, it does not necessarily mean that there is a cycle.
+
+## Union-Find Cycle Detection
+
+Detecting cycles using Union-Find is very different from using Depth First Search.
+
+Union-Find cycle detection works by first putting each node in its own subset (like a bag or container). Then, for every edge, the subsets belonging to each vertex are merged. For an edge, if the vertices already belong to the same subset, it means that we have found a cycle.
+
+Union-Find cycle detection is only applicable for Graphs that are undirected.
+
+The parent array contains the root vertex for every subset. This is used to detect a cycle by checking if two vertices on either side of an edge already belong to the same subset.
+
+The find method finds the root of the set that the given vertex belongs to.
+
+The union method combines two subsets.
+
+The is_cyclic method uses the find method to detect a cycle if two vertices x and y are already in the same subset. If a cycle is not detected, the union method is used to combine the subsets.
