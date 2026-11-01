@@ -23,3 +23,13 @@ How it works:
 
 - Start DFS traversal on a vertex.
 - Do a recursive DFS traversal on each of the adjacent vertices as long as they are not already visited.
+
+## Breadth First Search Traversal
+
+Breadth First Search visits all adjacent vertices of a vertex before visiting neighboring vertices to the adjacent vertices. This means that vertices with the same distance from the starting vertex are visited before vertices further away from the starting vertex are visited.
+
+How it works:
+
+- Put the starting vertex into the queue.
+- For each vertex taken from the queue, visit the vertex, then put all unvisited adjacent vertices into the queue.
+- Continue as long as there are vertices in the queue.
