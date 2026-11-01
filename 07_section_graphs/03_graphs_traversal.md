@@ -33,3 +33,8 @@ How it works:
 - Put the starting vertex into the queue.
 - For each vertex taken from the queue, visit the vertex, then put all unvisited adjacent vertices into the queue.
 - Continue as long as there are vertices in the queue.
+
+## DFS and BFS Traversal of a Directed Graph
+
+Depth first and breadth first traversals can actually be implemented to work on directed Graphs (instead of undirected) with just very few changes.
+
