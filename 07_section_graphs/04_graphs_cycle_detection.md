@@ -23,3 +23,7 @@ How it works:
 2. During DFS, mark vertices as visited, and run DFS on the adjacent vertices (recursively).
 3. If an adjacent vertex is already visited and is not the parent of the current vertex, a cycle is detected, and True is returned.
 4. If DFS traversal is done on all vertices and no cycles are detected, False is returned.
+
+## DFS Cycle Detection for Directed Graphs
+
+To detect cycles in Graphs that are directed, the algorithm is still very similar as for undirected Graphs, but the code must be modified a little bit because for a directed Graph, if we come to an adjacent node that has already been visited, it does not necessarily mean that there is a cycle.
